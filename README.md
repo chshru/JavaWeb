@@ -171,44 +171,44 @@
 * 导航栏部分代码
   ```
   .rank .list ul li span{
-  display: inline-block;
-  height:18px;
-  width:15px;
-  line-height:18px;
-  background:#1EC7E6;
-  text-align: center;
-  border-radius:3px;
-  transition:transform 1s,width 1s,height 1s,background 1s;
+    display: inline-block;
+    height:18px;
+    width:15px;
+    line-height:18px;
+    background:#1EC7E6;
+    text-align: center;
+    border-radius:3px;
+    transition:transform 1s,width 1s,height 1s,background 1s;
   }
   .rank .list ul li span:hover{
-  -webkit-transform:rotate(360deg);
-  width:23px;
-  height:23px;
-  line-height: 23px;
-  background-color:yellow;
+    -webkit-transform:rotate(360deg);
+    width:23px;
+    height:23px;
+    line-height: 23px;
+    background-color:yellow;
   }
   ```
 
 * 响应式媒体查询
   ```
   @media screen and (max-width:680px){
-  .right{
-  display:none;
-  }
-  header{
-  background:#F5F7F7;
-  position:relative;
-  width:100%;
-  text-align:center;
-  }
-  header ul{
-  border-top: 1px solid #fff; 
-  position:absolute;
-  top:60px;
-  left:-40px;
-  width:100%;
-  background-color:black;
-  }
+    .right{
+      display:none;
+    }
+    header{
+      background:#F5F7F7;
+      position:relative;
+      width:100%;
+      text-align:center;
+    }
+    header ul{
+      border-top: 1px solid #fff; 
+      position:absolute;
+      top:60px;
+      left:-40px;
+      width:100%;
+      background-color:black;
+    }
   }
   ```	
 
@@ -222,26 +222,26 @@
   ```
   var xml=false;
   try{
-  xml=new ActiveXObject("Msxml2.XMLHTTP");
+    xml=new ActiveXObject("Msxml2.XMLHTTP");
   }catch(e){
-  try{
-  xml=new ActiveXObject("Microsoft.XMLHTTP");
-  }catch(E){
-  xml=false;
-  }
+    try{
+      xml=new ActiveXObject("Microsoft.XMLHTTP");
+    }catch(E){
+    xml=false;
+    }
   }
   if(!xml&&typeof XMLHttpRequest!='undefined'){
-  xml=new XMLHttpRequest();
+    xml=new XMLHttpRequest();
   }
   function nav_request(url,obj){
-  var xml=ajax();
-  xml.open("GET",url);
-  xml.onreadystatechange=function(){
-  if(xml.readyState==4&&xml.status==200){
-  obj.innerHTML=xml.responseText;
-  }
-  }
-  xml.send(null);
+    var xml=ajax();
+    xml.open("GET",url);
+    xml.onreadystatechange=function(){
+      if(xml.readyState==4&&xml.status==200){
+        obj.innerHTML=xml.responseText;
+      }
+    }
+    xml.send(null);
   }
   ```
   页面的滑动刷新也可是上述所说实现。
