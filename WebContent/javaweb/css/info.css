@@ -1,0 +1,49 @@
+
+.item_title span{
+	color:#888888;
+}
+.item_title div{
+	padding-top: 10px;
+}
+
+.text{
+	height:auto;
+	min-height: 202px;
+	margin:auto;
+}
+.juqing{
+	-webkit-box-sizing:border-box;
+	width:85%;
+	margin:auto;
+	height:auto;
+	background:#fff;
+	padding:5px;
+	margin-top:20px;
+	border-radius: 3px;
+}
+
+
+.link{
+	margin:auto;
+	width:85%; 
+	border-bottom:1px dotted black; 
+}
+.link button{
+	background-color: #267EE5;
+	color:#fff;
+	outline:none;
+	border:none;
+	border-radius:2px;
+}
+.link a{
+	margin-left:2px;
+	display: inline-block;
+	text-decoration: none;
+	color:#0196E7;
+}
+.jietu{
+	width:85%;
+	margin:auto;
+}
+
+

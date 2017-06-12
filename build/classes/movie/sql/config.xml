@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/2002/xmlspec/dtd/2.10/xmlspec.dtd">
+<config>
+
+<driver>com.mysql.jdbc.Driver</driver>
+<url>jdbc:mysql://</url>
+<user>root</user>
+<password>root</password>
+<useUnicode>true</useUnicode>
+<characterEncoding>UTF-8</characterEncoding>
+<host>localhost:3306</host>
+<database>bbs</database>
+
+
+</config>
