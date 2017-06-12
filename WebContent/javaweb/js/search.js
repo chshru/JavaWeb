@@ -42,7 +42,7 @@
 		var main_content1=$("main_content");
 		var url=window.location.href;
 		url=url.replace("html","jsp");
-		url=url.replace("javaweb", "javaweb/js");
+		url=url.replace("javaweb", "javaweb/js")
 		request(url,main_content1);
 	}
 	addEvent()
