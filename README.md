@@ -169,48 +169,48 @@
 * 网页宽、高采用百分比单位计算，这样可以随着浏览器窗口大小变化而变换,以及使用了简单的响应式技术，媒体查询功能。
 
 * 导航栏部分代码
-
-	.rank .list ul li span{
-	display: inline-block;
-	height:18px;
-	width:15px;
-	line-height:18px;
-	background:#1EC7E6;
-	text-align: center;
-	border-radius:3px;
-	transition:transform 1s,width 1s,height 1s,background 1s;
-	}
-	.rank .list ul li span:hover{
-	-webkit-transform:rotate(360deg);
-	width:23px;
-	height:23px;
-	line-height: 23px;
-	background-color:yellow;
-	}
-
+  ```
+  .rank .list ul li span{
+  display: inline-block;
+  height:18px;
+  width:15px;
+  line-height:18px;
+  background:#1EC7E6;
+  text-align: center;
+  border-radius:3px;
+  transition:transform 1s,width 1s,height 1s,background 1s;
+  }
+  .rank .list ul li span:hover{
+  -webkit-transform:rotate(360deg);
+  width:23px;
+  height:23px;
+  line-height: 23px;
+  background-color:yellow;
+  }
+  ```
 
 * 响应式媒体查询
-
-	@media screen and (max-width:680px){
-		.right{
-  			display:none;
-		}
-		header{
-  			background:#F5F7F7;
-  			position:relative;
-  			width:100%;
-  			text-align:center;
-		}
-		header ul{
-  			border-top: 1px solid #fff; 
-  			position:absolute;
-  			top:60px;
-  			left:-40px;
-  			width:100%;
-  			background-color:black;
-		}
-	}
-	
+  ```
+  @media screen and (max-width:680px){
+  .right{
+  display:none;
+  }
+  header{
+  background:#F5F7F7;
+  position:relative;
+  width:100%;
+  text-align:center;
+  }
+  header ul{
+  border-top: 1px solid #fff; 
+  position:absolute;
+  top:60px;
+  left:-40px;
+  width:100%;
+  background-color:black;
+  }
+  }
+  ```	
 
 
 
@@ -219,30 +219,31 @@
 ##### 页面使用ajax发送异步请求
 
 * 利用浏览器提供内置对象ActiveXObject或XMLHttpRequest，使用JavaScript语言发送异步请求，可以实现页面的局部刷新。
-
-  	var xml=false;
-  	try{
-  		xml=new ActiveXObject("Msxml2.XMLHTTP");
-  	}catch(e){
-  		try{
-  		xml=new ActiveXObject("Microsoft.XMLHTTP");
-  		}catch(E){
-  		xml=false;
-  		}
-  	}
-  	if(!xml&&typeof XMLHttpRequest!='undefined'){
-  		xml=new XMLHttpRequest();
-  	}
-  	function nav_request(url,obj){
- 		var xml=ajax();
- 		xml.open("GET",url);
- 		xml.onreadystatechange=function(){
- 			if(xml.readyState==4&&xml.status==200){
- 				obj.innerHTML=xml.responseText;
- 			}
- 		}
-  	xml.send(null);
-	}	
+  ```
+  var xml=false;
+  try{
+  xml=new ActiveXObject("Msxml2.XMLHTTP");
+  }catch(e){
+  try{
+  xml=new ActiveXObject("Microsoft.XMLHTTP");
+  }catch(E){
+  xml=false;
+  }
+  }
+  if(!xml&&typeof XMLHttpRequest!='undefined'){
+  xml=new XMLHttpRequest();
+  }
+  function nav_request(url,obj){
+  var xml=ajax();
+  xml.open("GET",url);
+  xml.onreadystatechange=function(){
+  if(xml.readyState==4&&xml.status==200){
+  obj.innerHTML=xml.responseText;
+  }
+  }
+  xml.send(null);
+  }
+  ```
   页面的滑动刷新也可是上述所说实现。
 
 ##### 与后台对接
